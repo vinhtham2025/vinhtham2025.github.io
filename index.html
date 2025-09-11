@@ -5357,7 +5357,12 @@
       bottom: 0px;
       margin: auto;
     }
-
+#POPUP356 .popup-close {
+  visibility: hidden !important;
+}
+#POPUP356 .ladi-popup {
+  height: 450px !important;
+}
     #IMAGE252>.ladi-image>.ladi-image-background,
     #IMAGE367>.ladi-image>.ladi-image-background {
       width: 652.073px;
@@ -5817,7 +5822,7 @@
 
     #POPUP356 {
       width: 408px;
-      height: 630px;
+      height: 450px;
     }
 
     #GROUP427 {
@@ -9734,7 +9739,8 @@
         width: 278.956px;
         height: 440.75px;
         top: -31px;
-        left: 0px;
+        left: 0px;        
+      background-image: url("./assets/img/s/sp/img09.jpg");
       }
 
       #IMAGE47,
@@ -11374,14 +11380,12 @@
 </head>
 <body class="">
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Xử lý sự kiện click cho tất cả các nút đóng popup
-      document.querySelectorAll('.popup-close').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          document.getElementById('background-music').play();
-        });
-      });
-    });
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('.popup-close');
+  if (btn) {
+    console.log(123); // sẽ in ra 123
+  }
+});
   </script>
   <audio id="background-music" loop="">
     <source
