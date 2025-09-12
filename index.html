@@ -11407,6 +11407,13 @@ function triggerClose() {
         btn.click(); // ✅ giả lập click vào nút popup-close
       }
     }
+    if (e.target.closest('.ladi-button-headline')) {
+      // tìm nút .popup-close gần nhất
+      const btn = document.querySelector('.popup-close');
+      if (btn) {
+        btn.click(); // ✅ giả lập click vào nút popup-close
+      }
+    }
   });
 }
 
